@@ -1,0 +1,15 @@
+user       nobody;  
+worker_processes  1; 
+error_log  logs/error.log;
+pid        logs/nginx.pid;
+worker_rlimit_nofile 8192;
+
+  server { 
+    listen       80;
+    }
+
+    location /hello {
+      proxy_pass      //localhost:8080;
+    }
+  
+
